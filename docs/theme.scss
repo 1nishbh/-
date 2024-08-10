@@ -1,6 +1,5 @@
 // Include theme-specific fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Newa&family=Noto+Serif+Devanagari:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Newa&family=Noto+Serif+Devanagari:wght@100..900&display=swap');
 
 /*-- scss:defaults --*/
 // Background of the presentation
@@ -29,3 +28,8 @@ $selectionBackgroundColor: #9e1111;
 $selectionColor: #07c12c;
 
 
+.poem-text {
+    font-family: 'Noto Serif Devanagari', serif;  // Ensures Devanagari font for poems
+    white-space: pre-wrap;  // Preserves spacing and line breaks
+  }
+  
