@@ -1,0 +1,31 @@
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Newa&family=Noto+Serif+Devanagari:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Newa&family=Noto+Serif+Devanagari:wght@100..900&display=swap');
+
+/*-- scss:defaults --*/
+// Background of the presentation
+$backgroundColor: #2c2c2a;
+
+// Primary/body text
+$mainFont: 'Noto Serif Devanagari', serif;  // Using Devanagari font as the main font
+$mainFontSize: 28px;  // Adjusted font size for better readability
+
+
+// Vertical spacing between blocks of text
+$blockMargin: 25px;  // Slightly increased block margin for better text spacing
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: 'Noto Serif Devanagari', serif;  // Keeping Devanagari font for headings
+$headingColor: #ff0000;  // Changed heading color for better visibility
+$headingLineHeight: 1.5;  // Adjusted line height for better readability
+$headingLetterSpacing: normal;
+$headingFontWeight: bold;
+
+
+
+// Text selection
+$selectionBackgroundColor: #9e1111;
+$selectionColor: #07c12c;
+
+

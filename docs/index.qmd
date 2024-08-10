@@ -4,7 +4,8 @@ author: निस्चल भन्डारी
 format:
   revealjs:
     scrollable: true
-    theme: dark
+    theme: ["dark", "theme.scss"]
+
 ---
 
 ## सोच
@@ -36,3 +37,4 @@ format:
 ‘म’लाई बनाउँछन्, आफू प्रकट् हुन्छन्  
 ‘मै हुँ’ भन्ने ‘म’लाई  
 ‘म’ नरहुन्जेल फन्फनी नचाउछन् ।
+
