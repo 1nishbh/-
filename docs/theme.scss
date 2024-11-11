@@ -6,18 +6,18 @@
 $backgroundColor: #2c2c2a;
 
 // Primary/body text
-$mainFont: 'Noto Serif Devanagari', serif;  // Using Devanagari font as the main font
-$mainFontSize: 1.75rem;  // Base font size in rem for scalability
-$headingFontSize: 2.25rem; // Heading font size for better readability
+$mainFont: 'Noto Serif Devanagari', serif;
+$mainFontSize: 1.75rem;
+$headingFontSize: 2.25rem;
 
 // Vertical spacing between blocks of text
-$blockMargin: 1.5rem;  // Use rem for responsive spacing
+$blockMargin: 1.5rem;
 
 // Headings
 $headingMargin: 0 0 $blockMargin 0;
-$headingFont: 'Noto Serif Devanagari', serif;  // Keeping Devanagari font for headings
-$headingColor: #ff0000;  // Changed heading color for better visibility
-$headingLineHeight: 1.5;  // Adjusted line height for readability
+$headingFont: 'Noto Serif Devanagari', serif;
+$headingColor: #ff0000;
+$headingLineHeight: 1.5;
 $headingLetterSpacing: normal;
 $headingFontWeight: bold;
 
@@ -51,12 +51,28 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+
+  // On mobile, allow full width
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 }
 
-// Class for poem text
+// Poem text style with responsive adjustments
 .poem-text {
-  font-family: 'Noto Serif Devanagari', serif;  // Ensures Devanagari font for poems
-  white-space: pre-wrap;  // Preserves spacing and line breaks
+  font-family: 'Noto Serif Devanagari', serif;
+  white-space: pre-wrap;
+  margin: $blockMargin 0;
+  font-size: 1rem;  // Base size for readability
+
+  // On mobile, adjust font size and spacing
+  @media (max-width: 768px) {
+    font-size: 1.2rem;  // Slightly larger font for better readability on small screens
+    line-height: 1.6;
+    padding: 0 10px;    // Reduces padding for a closer fit to the edges
+    margin: 0;          // Removes excess margin for full screen usage
+  }
 }
 
 // Text selection styling
@@ -69,16 +85,24 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   // Adjustments for mobile screens
   body {
-    font-size: 1rem;  // Smaller font size for mobile
+    font-size: 1rem;
   }
-  $blockMargin: 1rem;  // Reduced block margin for smaller screens
-  $headingLineHeight: 1.2;  // Adjusted line height for smaller screens
+  $blockMargin: 1rem;
+  $headingLineHeight: 1.2;
 }
 
 @media (min-width: 1024px) {
   // Adjustments for larger screens
   body {
-    font-size: 2rem;  // Larger font size for larger screens
+    font-size: 2rem;
   }
-  $blockMargin: 2rem;  // Increased block margin for large screens
+  $blockMargin: 2rem;
+}
+
+
+@media print {
+  /* Hide everything in print */
+  body {
+    display: none;
+  }
 }
