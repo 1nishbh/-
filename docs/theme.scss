@@ -7,29 +7,78 @@ $backgroundColor: #2c2c2a;
 
 // Primary/body text
 $mainFont: 'Noto Serif Devanagari', serif;  // Using Devanagari font as the main font
-$mainFontSize: 28px;  // Adjusted font size for better readability
-
+$mainFontSize: 1.75rem;  // Base font size in rem for scalability
+$headingFontSize: 2.25rem; // Heading font size for better readability
 
 // Vertical spacing between blocks of text
-$blockMargin: 25px;  // Slightly increased block margin for better text spacing
+$blockMargin: 1.5rem;  // Use rem for responsive spacing
 
 // Headings
 $headingMargin: 0 0 $blockMargin 0;
 $headingFont: 'Noto Serif Devanagari', serif;  // Keeping Devanagari font for headings
 $headingColor: #ff0000;  // Changed heading color for better visibility
-$headingLineHeight: 1.5;  // Adjusted line height for better readability
+$headingLineHeight: 1.5;  // Adjusted line height for readability
 $headingLetterSpacing: normal;
 $headingFontWeight: bold;
-
-
 
 // Text selection
 $selectionBackgroundColor: #9e1111;
 $selectionColor: #07c12c;
 
+// Base styles for the document
+body {
+  background-color: $backgroundColor;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
 
+// Headings style
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont;
+  color: $headingColor;
+  line-height: $headingLineHeight;
+  margin: $headingMargin;
+  letter-spacing: $headingLetterSpacing;
+  font-weight: $headingFontWeight;
+}
+
+// Container with max-width for readability on large screens
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Class for poem text
 .poem-text {
-    font-family: 'Noto Serif Devanagari', serif;  // Ensures Devanagari font for poems
-    white-space: pre-wrap;  // Preserves spacing and line breaks
+  font-family: 'Noto Serif Devanagari', serif;  // Ensures Devanagari font for poems
+  white-space: pre-wrap;  // Preserves spacing and line breaks
+}
+
+// Text selection styling
+::selection {
+  background-color: $selectionBackgroundColor;
+  color: $selectionColor;
+}
+
+// Media queries for responsive design
+@media (max-width: 768px) {
+  // Adjustments for mobile screens
+  body {
+    font-size: 1rem;  // Smaller font size for mobile
   }
-  
+  $blockMargin: 1rem;  // Reduced block margin for smaller screens
+  $headingLineHeight: 1.2;  // Adjusted line height for smaller screens
+}
+
+@media (min-width: 1024px) {
+  // Adjustments for larger screens
+  body {
+    font-size: 2rem;  // Larger font size for larger screens
+  }
+  $blockMargin: 2rem;  // Increased block margin for large screens
+}
