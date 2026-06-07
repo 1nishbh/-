@@ -6,8 +6,9 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.31">
+<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="निश्चल भण्डारी">
   <title>ओभानो</title>
@@ -29,11 +30,209 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-81a2311a7b5c4e532d8a35ac99afc169.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -139,15 +338,30 @@
 </div>
 
 </section>
+<section id="दल" class="slide level2">
+<h2>१‍-१ दिल</h2>
+<p>समुन्द्रको गहिराइमा जन्मेका उस्का आँखा छन्<br>
+जून् पैँचो मागिरहन्छ उस्का दुई थुंगा मुस्कान<br>
+सदियो देखि हो कयौँ कलमहरू कुजिई बसेको<br>
+शब्दहरू उस्को महिमा गुन्गुनाउदै कम्मर कसेको ।</p>
+<p>खैर, ऊ पनि एक मान्छे न हो<br>
+हारगुहार गर्नै पर्दो हो देव-दुनियाँको<br>
+टुटे-फुटेको दिल जोड्ने बुटी पक्कै पनि छैन उसँग<br>
+तिमीसँग नभए जस्तै––अनेकन जुक्तिका बावजुद् ।</p>
+<p>सायद हुन सक्छ ऊ सँग पनि एक टुटे-फुटेको दिल<br>
+जो चक्षुमा पठाइरहन्छ जीवनका थोपाहरू रातै दिन<br>
+सोध्यौ भने उस्लाई तिमीले जीवनकै इसराहरू संगालेर<br>
+जानौला एक जुनीलाई जूनसम्मै पुऱ्याउने कसरी भनेर ।</p>
+</section>
 <section id="सच" class="slide level2">
 <h2>सोच</h2>
-<p>मरूभूमीमा बालुवाका कण जति<br>
-अथक मुटुका धड्कन् जति<br>
+<p>मरूभूमीमा बालुवाका कण जति––<br>
+अथक मुटुका धड्कन् जति––<br>
 यि सोचहरूको गणन कति साथी ?</p>
 <p>वायूको साहारामा आकाश टेक्न नसक्ने<br>
 सूर्यको अङ्गालोमा पग्लिन पनि नसक्ने<br>
 यो चारै दिशाको लखतरान कति साथी ?</p>
-<p>ऊ चुपचाप चारैतिर रगत धाराप्रवाह बहाउने<br>
+<p>मुटु चुपचाप चारैतिर रगत धाराप्रवाह बहाउने<br>
 नशामा ओखति राखी घाउ जचाउन पनि सक्ने<br>
 तिम्रो आफैसँगको आन्दोलन् चाहिँ कति साथी ?</p>
 </section>
@@ -157,18 +371,18 @@
 एक बचेरी निस्किएझैँ गुँडबाट पहिलो पल्ट<br>
 सजिन मेरा ओठमा आउँला हुइकेर<br>
 एक हाँसो कतै दुर-दुर बाट ।</p>
-<p>एक-दुई दिन बाँझा ओठमा लाली चढ्लान्<br>
+<p>बाँझा ओठमा एक-दुई दिन लाली चढ्लान्<br>
 फूल्लान् गुराँस गालाका भिरपाखा रंगाएर<br>
 कुनै मुलुकको कुनै कुनाबाट जाँगेर ओर्लेलान्<br>
 आँशुहरू अँजुलीमा वर्षिने लक्ष्य लिएर ।</p>
 <p>सिर्सिरे हावाको जहाँजमा उडेर वशन्त पनि आउँला<br>
 दुई पत्थरको भुँडीबाट जन्मेला एक कोमल पालुवा<br>
 रेटेर सारंगी वनको घाँटीमा कोइली सुरमा संगित भर्ला<br>
-बोझलाई चौतारीमा बिसाएर बिसाउला एक बटुवा ।</p>
+बोझलाई चौतारीमा बिसाएर सुस्ताउला एक बटुवा ।</p>
 <p>कोखबाट उहीँ जन्माएर हजार-लाख सन्तान<br>
 धर्ती बस्लिन् निहुरिई छालाको उमेर फाँटेर<br>
 छुरा रोपेर निर्दोष छातीमा चढ्लान् सिंहासन<br>
-पाप पखाल्न डाँडा पारिका देवी-देउता भाकेर ।</p>
+पाप पखाली डाँडा पारिका देवी-देउता भाकेर ।</p>
 </section>
 <section id="म-भतरक-नतय" class="slide level2">
 <h2>‘म’ भित्रको नृत्य</h2>
@@ -187,12 +401,12 @@
 <h2>हालत</h2>
 <p>आज तिमी बिमारको हालत बुझ्न आउनु<br>
 नाप-तौलले सही गलत छुट्टयाउन आउनु ।</p>
-<p>दबाइ व्यर्थ छ— तिम्रो एक झल्को मुस्कान ल्याएर आउनु<br>
-घाइतेले घाउ खरिद्छ—तिम्रो दु:खका दुकान ल्याएर आउनु ।</p>
-<p>हर्ष विस्मातको यो कहानी—आँशु बटुल्न रूमाल बोकेर आउनु<br>
+<p>दबाइ व्यर्थ छ तिम्रो एक झल्को मुस्कान ल्याएर आउनु<br>
+घाइतेले घाउ खरिद्छ तिम्रो दु:खका दुकान ल्याएर आउनु ।</p>
+<p>हर्ष विस्मातको यो कहानी आँशु बटुल्न रूमाल बोकेर आउनु<br>
 बेलाबखतको उदासी छल्न घर आँगनका सवाल बोकेर आउनु ।</p>
-<p>पहिल्याउलान् बिमारको कारण— तिमी घुम्टो ओढेर आउनु<br>
-निर्लज्ज दिल सपना बुन्ला फेरि—तिमी चुल्ठो बाँधेर आउनु ।</p>
+<p>पहिल्याउलान् बिमारको कारण तिमी घुम्टो ओढेर आउनु<br>
+निर्लज्ज दिल सपना बुन्ला फेरि तिमी चुल्ठो बाँधेर आउनु ।</p>
 <p>आज तिमी बिमारको हालत बुझ्न आउनु<br>
 नाप-तौलले सही गलत छुट्टयाउन आउनु ।</p>
 </section>
@@ -207,13 +421,13 @@
 <p>उस्को चुल्ठोबाट ताराहरु टिपेर<br>
 सगरतिरै फर्काउदो हुँ ।</p>
 <p>रंग बिर्सेका फुलमालाहरूको हाड झिकेर<br>
-मसानघाट तिरै मिल्काउदो हुँ ।</p>
+मसानघाँट तिरै मिल्काउदो हुँ ।</p>
 <p>तर फुर्सद कहाँ छ र यहाँ?<br>
 तिमी‍ — एक सोच,<br>
 म — अर्को सोच<br>
-सोचाइमा लत्पत्तिएका हामी ।</p>
-<p>काश फुर्सद हुदो हो त हामी<br>
-घुम्टो खोलेर प्रेम गर्दा हौँ !</p>
+सोचै-सोचमा लत्पत्तिएका हामी ।</p>
+<p>काश फुर्सद हुँदो हो त<br>
+हामी घुम्टो खोलेर प्रेम गर्दा हौँ !</p>
 </section>
 <section id="समय-एकसपरस" class="slide level2">
 <h2>समय एक्स्प्रेस</h2>
@@ -264,8 +478,8 @@
 के थाहा अझैँ कतै भेट्टिन्छौँ कि हामी?</p>
 <p>आऊ आज भुलेका सपना गनौँ<br>
 आत्मारक्षाको पर्खाल ढालौँ र<br>
-लक्ष्यको ठाडो उकालो उक्लिउँ<br>
-के थाहा जिन्दगी सबै यात्रामै कमाउछौँ कि हामी?</p>
+लक्ष्यको ठाडो उकालो उक्लिऊ<br>
+जिन्दगी सबै यात्रामै कमाउछौँ कि हामी?</p>
 <p>आऊ आज आफूले आफूलाई नभेटेको रात सम्झिउँ<br>
 आफूले आफूलाई रटाएका झुटको घुम्टो खोलौँ<br>
 आफूलाई ऐना देखाउँ र हेरौ एक टक भई<br>
@@ -274,21 +488,6 @@
 धेरै चपाएको चिनी छादौँ<br>
 कोल्टै पिच्छे बिझाउने कुनाको सिङ उखलौँ<br>
 मुहारमा हाँसो सिरानमा निद्रा फलाउँछौ कि हामी ?</p>
-</section>
-<section id="मगनत" class="slide level2">
-<h2>मगन्ते</h2>
-<p>कुनैबेला सृङ्गारको भोकमा मैले जुन माँगे<br>
-कैले चाहिँ मैले सम्पत्तिको आसमा सुन माँगे ।</p>
-<p>जवानीको उन्मादमा कसैसँग साइनो गाँसिदिन भनेँ<br>
-घुम्ति पिच्छे काम, नाम, र इनामको याचना गरेँ ।</p>
-<p>ब्रह्माण्ड सोच्दो हो म एक नअघाउने मगन्ते<br>
-तर यो शाश्वत भोकको आफ्नै इंजन छैन र ?</p>
-<p>मेरा मागहरू जस्तै<br>
-मलाई माग्नेहरुको पनि लस्कर छ––<br>
-समाजको र परिवार केहि अपेक्षा छ––<br>
-जन्मिनु आफैमा एक पौराणिक ऋण न हो––<br>
-पुर्खाले भेटि खोज्छन् भावी पिढी अंश––<br>
-आफूभित्रको एक अन्जानले पनि त सुबिधा माग्छ ।</p>
 </section>
 <section id="फर-आउल-नआउल" class="slide level2">
 <h2>फेरि आउला नआउला</h2>
@@ -301,18 +500,7 @@
 <p>तिम्रो र मेरो चिन्जान हुने विचित्र संयोग फेरि आउला नआउला<br>
 जीवनको सिलाई कटाई साथै गर्ने अनुरोध फेरि आउला नआउला ।</p>
 <p>एकल आवत जावतलाई साथको जरूरत फेरि आउला नआउला<br>
-अणु, आगो, वायू, प्राण, जल, धर्ती हरथोक फेरि आउला नआउला ।</p>
-</section>
-<section id="ओहर-दहर" class="slide level2">
-<h2>ओहोर-दोहोर</h2>
-<p>यो बाटोमा पहिले पनि हिडेको हो<br>
-यो यात्री पहिले पनि ढलेको हो ।</p>
-<p>अन्जान मुहारसँग पहिले पनि जोडिएको हो<br>
-प्राणप्रिय साइनो पहिले पनि तोडिएको हो ।</p>
-<p>आशा भरोसाका धुनमा छम्छमी पहिले पनि नाचेको हो<br>
-रोगी वर्तमानको दोषी इतिहास पहिले पनि जाँचेको हो ।</p>
-<p>जीवनले हरेक बाधा जित्दा मृत्यूले पहिले पनि हारेको हो<br>
-कच्कचे समाजको पहिरो मौन्ताले पहिले पनि टारेको हो ।</p>
+आगो, वायू, प्राण, जल, धर्ती हरथोक फेरि आउला नआउला ।</p>
 </section>
 <section id="सभगय" class="slide level2">
 <h2>सौभाग्य</h2>
@@ -350,16 +538,16 @@
 <section id="पतथर" class="slide level2">
 <h2>पत्थर</h2>
 <p>तप्केको कसैको जिन्दगीबाट<br>
-कसैको जिन्दगी भर्रिन सक्छ ।<br>
+कसैको जिन्दगी भर्रिन सक्छ<br>
 अनि कसैको जिन्दगी<br>
 तप्किएरै रित्तिन पनि सक्छ ।</p>
 <p>कोही आउँछ यस्तो मुटु ल्यएर<br>
-भएजतिको माया सबै सोरेर लान्छ ।<br>
+भएजतिको माया सबै सोरेर लान्छ<br>
 घोप्टि रहेको अर्को किनारको दिल<br>
 उस्को थोपाकै स्पर्शले अघाउन सक्छ ।</p>
 <p>समयले नमिलाएको हिसाब<br>
-एक मनुवा मिलाउन प्रयत्न गरिरहन्छ ।<br>
-तिमी टर्रो चर्को नगरको बासिन्दालाई<br>
+एक मनुवा मिलाउन प्रयत्न गरिरहन्छ<br>
+तिमी टर्रो-चर्को नगरको बासिन्दालाई<br>
 ऊ पत्थरको उत्तरमा फूल सुम्पिन सक्छ ।</p>
 </section>
 <section id="अगलट" class="slide level2">
@@ -378,10 +566,10 @@
 र छाम्दै मेरा अंग-अंग भेटाओस<br>
 कुना-कन्दरामा लुकेका छुप्-छुपे घाउँहरू ।</p>
 <p>आफै घुँडा टेकी निस्कर्षको बादल मुनी पुगी<br>
-मैले रोई सकी जिन्दगीका सारा बेदानाहरू<br>
+मैले रोई सकी जिन्दगीका सारा बेदनाहरू<br>
 जब सुस्ताइरहेको हुनेछु एक आर्यघाटमा<br>
 तब स्वर्गिलो चोलाको लालच देखाउन आउनेलाई<br>
-म हिर्काउने छु दनदनी बलिरहेका अगुल्टाहरूले ।</p>
+म हिर्काउने छु दन्दनी बलिरहेका अगुल्टाहरूले ।</p>
 </section>
 <section id="भय-क" class="slide level2">
 <h2>भयो कि?</h2>
@@ -392,7 +580,7 @@
 <p>सदियों देखीको समाज र समयको ऋण उधारो रह्यो कि?<br>
 अरूको बाटो हिड्दा कतै आफ्नो सूर्य अँध्यारो भयो कि?</p>
 <p>शब्द सबै बुझे पनि अर्थ अझैँ बाँकी रह्यो कि?<br>
-एक मुहारमा सारा जिन्दगी बन्धकी रह्यो कि?</p>
+एक शरीरमै सारा अस्तित्व बन्धकी रह्यो कि?</p>
 <p>तरिका नयाँ अनि समस्या भने उहीँ पुरानो रह्यो कि?<br>
 कदम चाल्दा धेरै थरी आत्मा कतै अन्धो भयो कि?</p>
 </section>
@@ -410,35 +598,6 @@
 <p>आज आइपुग्नु, भोली नआउनु<br>
 तिमी आइपुग्नु, डोली नआउनु<br>
 आज कति बित्ने हुन् ? साइनो कति छुट्ने हुन् ?</p>
-</section>
-<section id="भथय-क" class="slide level2">
-<h2>भाथ्यो कि ?</h2>
-<p>शव्दहरू उस्तै कथाहरू बर्बराइरहन्थे<br>
-जीवनको पाना पल्टाउने बेला भाथ्यो कि ?</p>
-<p>नयाँ गाउँको नक्सा कोरेकाहरू चल्मलाइरहन्थे<br>
-सम्बन्धको खिड्की उघार्ने बेला भाथ्यो कि ?</p>
-<p>छिमेकीहरू तिलको भरमा पाहाड ठड्याइरहन्थे<br>
-सन्चो-विस्नचोको जबाफ मुस्कानले टार्ने बेला भाथ्यो कि ?</p>
-<p>सम्झना र सपनाहरू अक्सर झम्टिरहन्थे<br>
-सोचहरू रित्तिन दिएर शून्यता अंगाल्ने बेला भाथ्यो कि ?</p>
-<p>पाइलाहरू उकालो सम्झेरै कठ्याङ्ग्रि रहन्थे<br>
-चढेको उकालो अवलोक्न गर्दै चौतारीमा सुस्ताउने बेला भाथ्यो कि?</p>
-</section>
-<section id="अरथतनतर" class="slide level2">
-<h2>अर्थतन्त्र</h2>
-<p>तिमी मलाई जति माया गर्छेउ<br>
-म पनि गर्छु कसैलाई त्यति नै ।</p>
-<p>तिमीलाई लाग्दो हो<br>
-म मायाको अर्थ बुझ्दिनँ ।</p>
-<p>अर्थ मायाको सिकेर आएकै हौँ सब<br>
-आमाको गर्भबाट जो मभित्र पनि<br>
-डेरा जमाई बसेको छ केही जन्म देखि ।</p>
-<p>यद्यपी मैले सकेको छुइन अझै पनि<br>
-प्रेमको गञ्जागोल अर्थतन्त्र मिलाउन ।</p>
-<p>यहाँ म लत्पत्तिएको छु यसरी<br>
-जसरी तिमी दलदलमा परेकी छौ<br>
-आशा र यथार्थको द्वन्द चलिरहदा छाती भित्र<br>
-एक हात दानी अर्को चाँहि भिक्षु भएको छ ।</p>
 </section>
 <section id="समत" class="slide level2">
 <h2>सीमित</h2>
@@ -469,10 +628,10 @@
 मलाई कुल्चिन्छन् ।</p>
 <p>म पाँजी भित्रका यि वेदना कदापी होइनन्<br>
 म भन्दा भयङ्कर केही त छ<br>
-म भन्दा बाहिर‍‍––<br>
-म भन्दा भित्र––<br>
+म भन्दा बाहिर‍‍<br>
+म भन्दा भित्र<br>
 केही त छ ?<br>
-जो मलाई थिचेर––<br>
+जो मलाई थिचेर<br>
 मलाई मिचेर<br>
 जन्मिन्छ र मैलाई गिज्याउँछ ।</p>
 <p>म भन्दा भब्य सु:खले<br>
@@ -485,18 +644,18 @@
 जो जाग्छ र मलई तरंगित बनाउँछ ।</p>
 <p>म र तिमी भन्दा पर केही फूलहरू त छन्<br>
 जस्ले हामीलाई नचाइरहन्छन् भमरा जसरी ।</p>
-<p>तिमी र म भित्र केही भमराहरू यस्ता पनि छन्<br>
+<p>तिमी र म भित्र केही भमराहरू त छन्<br>
 जस्ले डसिरहन्छन् हामी पुष्पकुञ्ज भए जसरी ।</p>
 </section>
 <section id="तम-र-म" class="slide level2">
 <h2>तिमी र म</h2>
 <p>घाम तापौला मंसिर पुसको<br>
-वर्षात छेकौला साउन भदौको<br>
+वर्षात सहुँला साउन भदौको<br>
 तिमी र म ।</p>
 <p>हाँसौला उकालीका दुई घुम्ती<br>
 बाँचौला ओरालीका दुई चुनौती<br>
 तिमी र म ।</p>
-<p>मायामा कैदी बनौला––मुक्त पनि भैजाउला<br>
+<p>मायामा कैदी बनौला मुक्त पनि भैजाउला<br>
 मायामा बिलाउला अर्थ पनि मायामै भेटाउला<br>
 तिमी र म ।</p>
 <p>छलौला यि सबै काँडे पर्खालहरू<br>
@@ -539,7 +698,7 @@
 दौडिन्छ बेस्सरी भिरेर मालाजती सारा<br>
 निसासिदै फूल्छ ढक्मक्क<br>
 मौरी भुलाउने प्रयतनमा ।</p>
-<p>भिड्को, भिड्का लागि, अनि भिड्मा समर्पित ऊ––<br>
+<p>भिड्को, भिड्का लागि, अनि भिड्मा समर्पित ऊ<br>
 लखेट्छ कस्ले, पुग्छ कहाँ पत्तो चाहिँ छैन<br>
 तर दौडिए जत्ती पनि<br>
 अन्तमा ऊ त भिडको मुठ्ठीमा ।</p>
@@ -556,31 +715,6 @@
 उस्का पाउँका पाउँजु कानका झुम्काको गजल सुनाउँछ ।</p>
 <p>काँचुली फेर्दा समेत खप्परले उस्कै यादको भारी भेटाउँछ<br>
 सम्झी कर्के नजर कालो केश माछा पुन: माँझी बोलाउँछ ।</p>
-</section>
-<section id="सलई-कटई" class="slide level2">
-<h2>सिलाई-कटाई</h2>
-<p>घुम्ती जीवनका सारै थकाउने<br>
-मन भने पोल गाड्दै छ––<br>
-पिङ अझैँ खेल्ने अरे ।</p>
-<p>माया मोहले भष्म नै बनाउने<br>
-मन भने आगो जोड्दै छ‍––<br>
-आफू अझैँ जल्ने अरे ।</p>
-<p>नुन-सुन-बैगुन सबै ढाँड सेकाउने<br>
-मन भने गोजी बुन्दै छ––<br>
-खोक्रोपना अझैँ बटुल्ने अरे ।</p>
-</section>
-<section id="अनयय" class="slide level2">
-<h2>अन्याय</h2>
-<p>तिमी कसैको अङ्गालोमा हुनु यो भविष्यलाई अन्याय भो<br>
-तिमी विशाल समुद्रसम्म पुग्नु यो पोखरीलाई अन्याय भो ।</p>
-<p>तिमी कसैको प्राकाश हुनु यो ग्रहणलाई अन्याय भो<br>
-तिम्रा हत्केलाले चन्द्रा छुनु यो काँधलाई अन्याय भो ।</p>
-<p>तिम्रो कविता सधैँ बाँचिरहनु यो कलमलाई अन्याय भो<br>
-तिमी विगतमा मात्र भेट्टिनु यी कदमलाई अन्याय भो ।</p>
-<p>तिम्रो सिउँदो उसँग मुस्कुराउनु यो रगतलाई अन्याय भो<br>
-तिमी बेहोसीमा मात्र भेटिनु यो वर्तमानलाई अन्याय भो ।</p>
-<p>तिमी आकाश धर्तीमा फूल्नु यि काँडालाई अन्याय भो<br>
-तिमी बेर अबेर झुल्किरहनु यो अन्धोलाई अन्याय भो ।</p>
 </section>
 <section id="लखइ" class="slide level2">
 <h2>लेखाइ</h2>
@@ -599,21 +733,6 @@
 लेख्छु समाजका हत्कडीहरू<br>
 लेख्छु नबगेका आँशुहरू र<br>
 लेख्छु जीवितका चिहानहरू ।</p>
-</section>
-<section id="दधर" class="slide level2">
-<h2>दोधार</h2>
-<p>“जाबो हरफहरू के लेख्छस?” मन गिज्ज्याउँछ<br>
-शब्दले समेट्न नसक्ने सानदार संसार दर्शाउँछ<br>
-दोधारको एक मध्यरात पेटी कसी म पर्खाल नाँघ्छु ।</p>
-<p>देख्छु कलम भन्दा क्यौँ गुणा भव्य महलहरू<br>
-देख्छु ताराझैँ चम्किरहेका मान्छेका नयनहरू<br>
-देख्छु शव्दकोषको परिधि परका अङ्गलाहरू<br>
-देख्छु पानामा नउत्रिने मान्छेका आयामहरू ।</p>
-<p>संसार देखेर घुँडा टेक्छु र त फर्किन्छु पुन: पानामा<br>
-कोर्छु भव्य सहरका स-साना कोठाहरू<br>
-कोर्छु नपढिने आँखाहरू र नखुलेका ओठहरू<br>
-कोर्छु बुढा रूखले खेपेका हुरी चट्याङहरू<br>
-कोर्छु बारम्बारका जीवन र मृत्यूका भेटघाटहरू ।</p>
 </section>
 <section id="क-खजरहछ" class="slide level2">
 <h2>के खोजिरहेछौ ?</h2>
@@ -699,24 +818,39 @@
 यो भयकंर गहिरो समुन्द्र हो साथी<br>
 खूंखार पौडेवाजहरू पनि यहाँ डुबानमा परेका छन् ।</p>
 </section>
+<section id="दधर" class="slide level2">
+<h2>दोधार</h2>
+<p>“जाबो हरफहरू के लेख्छस?” मन गिज्ज्याउँछ<br>
+शब्दले समेट्न नसक्ने सानदार संसार दर्शाउँछ<br>
+दोधारको एक मध्यरात पेटी कसी म पर्खाल नाँघ्छु ।</p>
+<p>देख्छु कलम भन्दा क्यौँ गुणा भव्य महलहरू<br>
+देख्छु ताराझैँ चम्किरहेका मान्छेका नयनहरू<br>
+देख्छु शव्दकोषको परिधि परका अङ्गलाहरू<br>
+देख्छु पानामा नउत्रिने मान्छेका आयामहरू ।</p>
+<p>संसार देखेर घुँडा टेक्छु र त फर्किन्छु पुन: पानामा<br>
+कोर्छु भव्य सहरका स-साना कोठाहरू<br>
+कोर्छु नपढिने आँखाहरू र नखुलेका ओठहरू<br>
+कोर्छु बुढा रूखले खेपेका हुरी चट्याङहरू<br>
+कोर्छु बारम्बारका जीवन र मृत्यूका भेट्घाटहरू ।</p>
+</section>
 <section id="तमर-मर-कहन" class="slide level2">
 <h2>तिम्रो मेरो कहानी</h2>
 <p>कसरी सोचुँ मेरा दु:ख तिम्रा भन्दा भब्य छन् भनी ?<br>
 छानो मूनि एउटै आकाशको<br>
 तिम्रा बाटामा पनि ठेस त पक्कै लाग्दा हुन् ।</p>
 <p>तिम्रा परिश्रमका बाली मास्ने<br>
-असिने पानी बर्षिदो पक्कै हो ।<br>
+असिने पानी बर्षिदो पक्कै हो<br>
 आफ्नै आँशुबाट ओत् तिमी पनि त खोज्दा हौ ।</p>
 <p>कुनै खण्डहरूमा खुसीले गदगद परी डुल्दा हौ<br>
 छाती फुलाएर, मुहारमा ज्योती बालेर टोल चारी<br>
 कुनै प्रहरहरूमा तिमी काँप्दै ठिङ्ङ उभ्भिरहँदा हौ<br>
-मनमा आँसुका ढिका बटुल्दै हिमखण्ड नै ठड्याएर ।</p>
+मनमा आँसुका ढिका बटुल्दै एक हिमखण्ड ठड्याई ।</p>
 <p>एउटै जमिन र गगन बिच उनिएका<br>
 तिमी र म<br>
-कति पो फरक हुन सक्छौ होला––<br>
+कति पो फरक हुन सक्छौ होला<br>
 सम्मेटिदा पुन: ब्रह्माण्डको कोखमा<br>
 तिमी र म<br>
-धुवाँको मुस्लो बनी माटोको गाँठो बनी ।</p>
+धुवाँको मुस्लो बनी माटोको ढिस्को बनी ।</p>
 </section>
 <section id="चटपटक" class="slide level2">
 <h2>चोटपटक</h2>
@@ -749,19 +883,6 @@
 जहाँ अर्को चरी घरजाम गरेर निर्धक्क बसेको छ ।</p>
 <p>डाँडाको यो रुख दिनै रात बारै मास सारै एक्लो हुन्छ<br>
 तर जल जमिन पवन सूर्य सबैसित ऊ दिनहुँ भेटिन्छ ।</p>
-</section>
-<section id="सकर" class="slide level2">
-<h2>सिकार</h2>
-<p>लोभीलाई सिकारीले सोध्छ, “भन तिमीलाई कति चाहिन्छ ?”<br>
-स्वार्थलाई त हिरा मोति सम्पत्ति अथाहा चाहिन्छ ।</p>
-<p>अनि भन तिमीलाई मिहिनेत र प्राप्तिको मार्ग चाहिन्छ ?<br>
-आलस्यतालाई त जादु चल्ने कर्तब्य नहुने स्वर्ग चाहिन्छ ।</p>
-<p>के तिमीलाई अंश, प्रशंसा, शान, बर्दान सब चाहिन्छ ?<br>
-मनलाई त राज, राज्य, सौख, शक्ति हरदिन चाहिन्छ ।</p>
-<p>दौडधुपको हस्याङफस्याङमा के आफ्नो पहिचान चाहिन्छ ?<br>
-तिमी भित्रको समाज चिन्न प्रसस्त खोज अनुसन्धान चाहिन्छ ।</p>
-<p>जीवनको रोग अनि ओखती पनि त्यतै पाइन्छ ।<br>
-खोजे बुझे लक्ष्मी सरस्वती पुग्ने जति पाइन्छ ।</p>
 </section>
 <section id="डकटर" class="slide level2">
 <h2>डाँक्टर</h2>
@@ -840,7 +961,8 @@
 </section>
 <section id="झरक-ओत" class="slide level2">
 <h2>झरीको ओत</h2>
-<p>कोही आउछ<br>
+<p>revise<br>
+कोही आउछ<br>
 टुसुक्क बस्छ<br>
 काँपी रहेको दिललाई<br>
 कम्मल ओढाउँछ ।</p>
@@ -2027,7 +2149,7 @@
 दिमागले दिलमा यस्तो सियो चलाउँछ<br>
 आँफै उम्कन नसक्ने गरी आफ्नै गाँठोमा फस्छ ।</p>
 </section>
-<section id="ओहर-दहर-1" class="slide level2">
+<section id="ओहर-दहर" class="slide level2">
 <h2>ओहोर‍-दोहोर</h2>
 <p>खाली––सन्नाटा––फाँट<br>
 बगैँचा भनी नठान एक मरुभूमीलाई ।</p>
@@ -2360,7 +2482,7 @@
 पक्कै जीवनकालमा यिनीहरूलाई पनि<br>
 जून, तारा, बादल केही हेर्ने फुर्सद नजुरेको हुनु पर्छ ।</p>
 </section>
-<section id="दल" class="slide level2">
+<section id="दल-1" class="slide level2">
 <h2>१‍-१ दिल</h2>
 <p>समुन्द्रको गहिराइमा जन्मेका उस्का आँखा छन्<br>
 जूनमा अपुग भनेकै उस्को चहकिलो मुस्कान हो<br>
@@ -2894,14 +3016,14 @@
 वर-पर चारैतिर आफैभित्र नव चलायमान उब्जेको होस्––<br>
 हड्डी-हड्डी ठोक्किएर मसिनो सुस्केरा बल्ल गुञ्जिदै होस्––<br>
 तथास्तु ! तथास्तु !</p>
-
-</section>
-    </div>
-  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
-</div></div>
+</div>
+</section>
+    </div>
+  </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="index_files/libs/revealjs/dist/reveal.js"></script>
@@ -2930,8 +3052,7 @@
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -3085,7 +3206,7 @@
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -3112,172 +3233,159 @@
       });
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
-      window.document.addEventListener("DOMContentLoaded", function (event) {
-        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-        tabsets.forEach(function(tabset) {
-          const tabby = new Tabby('#' + tabset.id);
-        });
-        const isCodeAnnotation = (el) => {
-          for (const clz of el.classList) {
-            if (clz.startsWith('code-annotation-')) {                     
-              return true;
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
           }
-          return false;
-        }
-        const onCopySuccess = function(e) {
-          // button target
-          const button = e.trigger;
-          // don't keep focus
-          button.blur();
-          // flash "checked"
-          button.classList.add('code-copy-button-checked');
-          var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copied!");
-          let tooltip;
-          if (window.bootstrap) {
-            button.setAttribute("data-bs-toggle", "tooltip");
-            button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copied!");
-            tooltip = new bootstrap.Tooltip(button, 
-              { trigger: "manual", 
-                customClass: "code-copy-button-tooltip",
-                offset: [0, -8]});
-            tooltip.show();    
-          }
-          setTimeout(function() {
-            if (tooltip) {
-              tooltip.hide();
-              button.removeAttribute("data-bs-title");
-              button.removeAttribute("data-bs-toggle");
-              button.removeAttribute("data-bs-placement");
-            }
-            button.setAttribute("title", currentTitle);
-            button.classList.remove('code-copy-button-checked');
-          }, 1000);
-          // clear code selection
-          e.clearSelection();
-        }
-        const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
-            }
-            return codeEl.innerText;
-        }
-        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-          text: getTextToCopy
-        });
-        clipboard.on('success', onCopySuccess);
-        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-            text: getTextToCopy,
-            container: window.document.getElementById('quarto-embedded-source-code-modal')
-          });
-          clipboardModal.on('success', onCopySuccess);
-        }
-          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-          var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
-          var isInternal = (href) => {
-              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-          }
-          // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-          for (var i=0; i<links.length; i++) {
-            const link = links[i];
-            if (!isInternal(link.href)) {
-              // undo the damage that might have been done by quarto-nav.js in the case of
-              // links that we want to consider external
-              if (link.dataset.originalHref !== undefined) {
-                link.href = link.dataset.originalHref;
-              }
-            }
-          }
-        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-          const config = {
-            allowHTML: true,
-            maxWidth: 500,
-            delay: 100,
-            arrow: false,
-            appendTo: function(el) {
-                return el.closest('section.slide') || el.parentElement;
-            },
-            interactive: true,
-            interactiveBorder: 10,
-            theme: 'light-border',
-            placement: 'bottom-start',
-          };
-          if (contentFn) {
-            config.content = contentFn;
-          }
-          if (onTriggerFn) {
-            config.onTrigger = onTriggerFn;
-          }
-          if (onUntriggerFn) {
-            config.onUntrigger = onUntriggerFn;
-          }
-            config['offset'] = [0,0];
-            config['maxWidth'] = 700;
-          window.tippy(el, config); 
-        }
-        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-        for (var i=0; i<noterefs.length; i++) {
-          const ref = noterefs[i];
-          tippyHover(ref, function() {
-            // use id or data attribute instead here
-            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-            try { href = new URL(href).hash; } catch {}
-            const id = href.replace(/^#\/?/, "");
-            const note = window.document.getElementById(id);
-            if (note) {
-              return note.innerHTML;
-            } else {
-              return "";
-            }
-          });
-        }
-        const findCites = (el) => {
-          const parentEl = el.parentElement;
-          if (parentEl) {
-            const cites = parentEl.dataset.cites;
-            if (cites) {
-              return {
-                el,
-                cites: cites.split(' ')
-              };
-            } else {
-              return findCites(el.parentElement)
-            }
-          } else {
-            return undefined;
-          }
-        };
-        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-        for (var i=0; i<bibliorefs.length; i++) {
-          const ref = bibliorefs[i];
-          const citeInfo = findCites(ref);
-          if (citeInfo) {
-            tippyHover(citeInfo.el, function() {
-              var popup = window.document.createElement('div');
-              citeInfo.cites.forEach(function(cite) {
-                var citeDiv = window.document.createElement('div');
-                citeDiv.classList.add('hanging-indent');
-                citeDiv.classList.add('csl-entry');
-                var biblioDiv = window.document.getElementById('ref-' + cite);
-                if (biblioDiv) {
-                  citeDiv.innerHTML = biblioDiv.innerHTML;
-                }
-                popup.appendChild(citeDiv);
-              });
-              return popup.innerHTML;
-            });
-          }
+          return codeEl.innerText;
         }
       });
-      </script>
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
     
 
 </body></html>
